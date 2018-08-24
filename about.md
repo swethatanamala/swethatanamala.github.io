@@ -1,15 +1,24 @@
 ---
 layout: post
-title: "About"
-author: "Chester"
-permalink: /about/
+title: About
 ---
 
-A friend of mine writes short stories. One sunny day, I asked if he wanted a website to showcase his works and he agreed. I decided to use GitHub Pages to host his site. That way he wouldn't have to buy a domain and a server.
+<p align="center">
+<img src="/assets/Images/about/about.jpg" alt="Architecture">
+</p>
 
-While doing some research up on GitHub Pages, I accidentally chanced upon this _simple, blog-aware, static site generator_ called [Jekyll](https://jekyllrb.com/) which works really well with GitHub Pages. I figured it would do just fine for my friend and I set about searching for a pretty theme. I wanted a theme with a _book-ish_ vibe. Unfortunately, most of the themes were too modern. Eventually, I caved and begun working on my own theme. With the help of [Poole](https://github.com/poole/poole), the Jekyll Butler, I was able to build **Tale**.
+  I am Swetha Tanamala from Nellore, Andhra Pradesh, India. I graduated dual degree course (B.Tech + M.Tech) in Computer Science and Engineering from Indian Institute of Technology, Madras in 2017.
 
-## Contribute
-Feel free to create an issue or make a pull request on [GitHub](https://github.com/chesterhow/tale).
+Currently, I am working as AI scientist at [Qure.ai](http://qure.ai). In this blog, I explain some of the research work associated with my job.
+
+I am active in the below social media websites:
+
+* [LinkedIn](https://www.linkedin.com/in/swetha-tanamala-14b68b66/)
+* [Twitter](https://twitter.com/swetha_tanamala)
+* [Facebook](https://www.facebook.com/swetha.tanamala)
+* [Quora](https://www.quora.com/profile/Swetha-Tanamala)
+
+
+Have questions or suggestions? Feel free to ask me at swetha.tanamala@gmail.com
 
 Thanks for reading!
