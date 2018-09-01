@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to Scrape Web using Selenium and Beautiful Soup
-description: Develop a recipe book for reading recipes without distubance of advertisements. Also devleop features for retrieving the recipes by using search through ingredients you have as well as recipe name.
+image: "https://swethatanamala.github.io/assets/Images/web_scraping/show_more.png"
 ---
 
 In this tutorial, we will learn on how to scrap web using selenium and beautiful soup. I am going to use these tools to collect recipes from various food websites and store them in a structured format in a database. The 

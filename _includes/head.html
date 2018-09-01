@@ -1,17 +1,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   {% if page.title == "Home" %}
-    <meta name="description" content="{{ site.description }}">
+    {% assign title =  site.title %}
+    {{ }}
+  {% else %}
+    {% assign title =  page.title | append: ' &middot; ' | append: site.title %}
+    
   {% endif %}
 
-  <title>
-    {% if page.title == "Home" %}
-      {{ site.title }}
-    {% else %}
-      {{ page.title }} &middot; {{ site.title }}
-    {% endif %}
-  </title>
+  <title>{{title}}</title>
 
   <!-- CSS -->
   <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
@@ -22,6 +21,26 @@
   <link rel="icon" type="image/png" sizes="16x16" href="{{ "/assets/favicon-16x16.png" | relative_url }}">
   <link rel="apple-touch-icon" sizes="180x180" href="{{ "/assets/apple-touch-icon.png" | relative_url }}">
 
+  <!-- Meta -->
+  {% if page.title == "Home" %}
+    {% assign description =  site.description | truncatewords: 30 %}
+  {% elsif page.description %}
+    {% assign description =  page.description | strip_html | truncatewords: 30 %}
+  {% else %}
+    {% assign description =  page.content | strip_html | truncatewords: 30 %}
+  {% endif %}
+
+  <meta name="og:title" property="og:title" content="{{title}}">
+  <meta name="description" content="{{ description }}">
+  <meta property="og:description" content="{{ description }}" />
+  <meta property="og:type" content="article" />
+  {% if page.image %}
+  <meta property="og:image" content="{{page.image}}" />
+  {% endif %}
+  <meta name="twitter:card" content="summary"/>
+  <meta name="twitter:site" content="@swetha_tanamala" />
+  <meta name="twitter:creator" content="@swetha_tanamala" />
   <!-- RSS -->
+
   {% feed_meta %}
 </head>
