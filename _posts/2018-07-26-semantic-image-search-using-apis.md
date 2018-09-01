@@ -10,6 +10,8 @@ The idea of this project is to simulate Google image search, i.e, query the imag
 2. Fuzzy search the database
 3. UI design to show our image gallery
 
+You can preview the end product [here](https://swethatanamala.github.io/semantic-image-search/). 
+
 ### Understanding the image content
 For understanding the image content, there are many computer vision web APIs. These APIs are available as paid version and also for free but limiting number of calls per minute. Among them the popular ones are Microsoft's [Computer Vision API](https://azure.microsoft.com/en-us/services/cognitive-services/computer-vision/), Google [Cloud Vision API](https://cloud.google.com/vision/) and Clarifi [Models APIs](https://clarifai.com/demo). The mentioned APIs were developed using cutting-edge technologies like deep neural networks (which results in high accuracies). We use Microsoft Computer Vision API for our project.
 
@@ -123,7 +125,7 @@ for (let i=0; i < images.length; i++){
         }, (i+1)*5000);
 }
 ```
-### Fuzzy search the image
+### Fuzzy search the databse
 
 Fuzzy string matching is an approximate string matching technique. In java script, [fuse.js](http://fusejs.io) module is available for finding strings that match a pattern approximately. This module gives many advantages like searching by ID, weighted search, searching in arrays of strings, searching in arrays of objects etc. 
 
