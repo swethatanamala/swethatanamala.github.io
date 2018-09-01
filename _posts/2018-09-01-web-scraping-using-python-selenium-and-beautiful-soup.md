@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to Scrape Web using Selenium and Beautiful Soup
+title: How to Scrape Web using Python, Selenium and Beautiful Soup 
 image: "https://swethatanamala.github.io/assets/Images/web_scraping/show_more.png"
 ---
 
