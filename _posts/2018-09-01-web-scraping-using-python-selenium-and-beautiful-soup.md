@@ -9,7 +9,7 @@ two tasks involved in collecting the recipes are:
 - Get all the recipe urls from the website using selenium
 - Convert the html information of a recipe webpage into a structed json using beautiful soup.
 
-For our task, I picked the [NDTV food](https://food.ndtv.com/recipes) and [Vahrehvah](https://www.vahrehvah.com/) as a source for extracting recipes.
+For our task, I picked the [NDTV food](https://food.ndtv.com/recipes) as a source for extracting recipes.
 
 ## Selenium
 [Selenim Webdriver](https://www.seleniumhq.org/projects/webdriver/) automates web browsers. The important use case of it is for autmating web applications for the testing purposes. It can also be used for web scraping. In our case, I used it for extracting all the urls corresponding to the recipes. 
