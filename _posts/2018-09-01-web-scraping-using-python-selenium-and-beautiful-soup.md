@@ -4,7 +4,7 @@ title: How to Scrape Web using Python, Selenium and Beautiful Soup
 image: "https://swethatanamala.github.io/assets/Images/web_scraping/show_more.png"
 ---
 
-In this tutorial, we will learn on how to scrap web using selenium and beautiful soup. I am going to use these tools to collect recipes from various food websites and store them in a structured format in a database. The 
+In this tutorial, we will learn how to scrap web using selenium and beautiful soup. I am going to use these tools to collect recipes from a food website and store them in a structured format in a database. The 
 two tasks involved in collecting the recipes are:
 - Get all the recipe urls from the website using selenium
 - Convert the html information of a recipe webpage into a structed json using beautiful soup.
@@ -117,7 +117,7 @@ def keep_clicking_show_more():
 
 Now let's get all the recipes in NDTV!
 
-```
+```python
 all_recipe_links = {}
 for category, urls in sub_category_links.items():
     if category == 'CHEFS':
@@ -141,7 +141,7 @@ for category, urls in sub_category_links.items():
 
 ## Beautiful Soup
 
-Now that we extracted all the recipe URLs, the next task is to oepn these URLs and parse HTML to extract relevant information. We will use [Requests](http://docs.python-requests.org/en/master/) python library to open the urls and excellent [Beautiful Soup](https://beautiful-soup-4.readthedocs.io/en/latest/) library to parse the opened html.
+Now that we extracted all the recipe URLs, the next task is to open these URLs and parse HTML to extract relevant information. We will use [Requests](http://docs.python-requests.org/en/master/) python library to open the urls and excellent [Beautiful Soup](https://beautiful-soup-4.readthedocs.io/en/latest/) library to parse the opened html.
 
 ```python
 from bs4 import BeautifulSoup
