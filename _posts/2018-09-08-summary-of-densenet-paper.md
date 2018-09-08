@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Summary of Densenet Paper
-description: The authors developed a dense newtork model designed for image recognition. The main idea of the network was using dilated convolutions to aggregate multi scale contextual information without losing resolution of the input.
+description: The authors developed a dense newtork model for image classification. The main idea of the network was to connect each layer to every other layer in the feed forward fashion to improve the information flow in both forward and backward ways of a network.
 ---
 
 <script type="text/javascript" async
@@ -13,6 +13,7 @@ description: The authors developed a dense newtork model designed for image reco
 - Submission date: 25 Aug 2016
 
 ## Key Contributions
+- Developed densenet model for image classification.
 - The idea of the dense convolutional neural network is to connect each layer to every other layer in the feed forward fashion.
 - Concatenating feature-maps learned by different layers increases variation in the input of subsequent layers and improves efficiency.
 
