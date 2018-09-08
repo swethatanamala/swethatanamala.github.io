@@ -21,18 +21,6 @@ The advantages of the denset are:
 - Reducing the number of parameters
 
 ## Densenet
-Superficially, DenseNets are quite similar to ResNets. But the inputs format is different in two networks which lead to substantially different behaviours. The following table presents the differences between two networks.
-
-
-|Feature| Densenet   |     Resnet     | 
-|:-----:|:---------------:|:-----------------------:|
-|Format of passing previous layer features to other layers| by concatening| by summation|
-|No of inputs to $l^{th}$ layer| $l$ | $1$ |
-|Total no of connections in L-layer network| $L(L+1)/2$ | $L$ |
-|The way to address vanishing-gradient problem| using dense connections|using stochastic depth|
-|Performance Improvement|using power of deep architecture| using power of feature reuse|
-
-
 Increased in the depth of convolutional neural network caused a problem of vanishing information about the input or gradiant when passing through many layers. In order to solve this, authors introduced an architecture with simple connectivity pattern to ensure the maximum flow of information between layers both in forward computation as well as in backward gradiants computation. This network connects all layers in such a way each layer obtains additional inputs from all preceding layers and passes its own feature-maps to all subsequent layers. 
 
 
@@ -45,6 +33,16 @@ The main functions in the above shown densenet architecture are:
 - Composite function: The network comprises L layers. Each layer implements a non-linear transformation $H_l(x)$ where l indexes the layer. $H_l(x)$ as a composite function consists of three consecutive operations: Batch normalization (BN), followed by a rectified linear unit (ReLU) and a 3 x 3 convolution (Conv).
 - Pooling Layers: The concatenation operation mentioned above is not vitable when the size of feature-maps are variable. As we know, the essential part of image recognition convolutional networks is down-sampling layers. To facilitate the down-sampling in the architecture, authors divided the entire architecture into multiple densely connected dense blocks. The layers between these dense blocks are transition layers which perform convolution and pooling. 
 
+### DenseNet vs ResNet
+Superficially, DenseNets are quite similar to ResNets. But the inputs format is different in two networks which lead to substantially different behaviours. The following table presents the differences between two networks.
+
+|Feature| Densenet   |     Resnet     | 
+|:-----:|:---------------:|:-----------------------:|
+|Format of passing previous layer features to other layers| by concatening| by summation|
+|No of inputs to $l^{th}$ layer| $l$ | $1$ |
+|Total no of connections in L-layer network| $L(L+1)/2$ | $L$ |
+|The way to address vanishing-gradient problem| using dense connections|using stochastic depth|
+|Performance Improvement|using power of deep architecture| using power of feature reuse|
 
 
 ## Experiments

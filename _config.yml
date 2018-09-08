@@ -12,6 +12,7 @@ author:
 
 # Build settings
 markdown:       kramdown
+mathjax: true
 
 # Assets
 sass:
