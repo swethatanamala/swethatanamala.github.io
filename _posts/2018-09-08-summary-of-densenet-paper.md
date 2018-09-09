@@ -63,8 +63,9 @@ Experiments are done on popular datasets like CIFAR-10 (C10), CIFAR-100 (C100), 
  - DenseNet-B network - It introduces 1 x 1 convolution as a bottleneck layer before each 3 x 3 layer to reduce the number of input feature-maps, and thus to improve computational efficiency. 
  - DenseNet-BC network - It is same as DenseNet-B with additional compression factor. 
  
-Compression factor $(\theta)$ - If a denseblock generates m feature-maps, then the next transition layer outputs $\theta \times m$ feature-maps (where $\theta$ varies from 0 to 1). This compression factor is introduced to improve model compactness. In the above experiments, Densenet and DenseNet-BC uses 3 dense blocks as shown in the above network diagram. 
+Compression factor $(\theta)$ - If a denseblock generates m feature-maps, then the next transition layer outputs $\theta \times m$ feature-maps (where $\theta$ varies from 0 to 1). This compression factor is introduced to improve model compactness. 
 
+In the above experiments, Densenet and DenseNet-BC uses 3 dense blocks as shown in the above network diagram. 
 Whereas for training on Imagenet dataset, DenseNet-BC uses four dense blocks.  
 
 
