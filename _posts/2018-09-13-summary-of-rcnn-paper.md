@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Summary of R-CNN Paper
-description: The authors developed a dense newtork model for image classification. The main idea of the network was to connect each layer to every other layer in the feed forward fashion to improve the information flow in both forward and backward ways of a network.
+description: The authors developed a r-cnn newtork model for object detection and semantic segmentation. The main idea of the network was to apply high-capacity convolutional neural networks (CNNs) to bottom-up region proposals for classification and also by supervised pre-training for an auxiliary task, followed by domain-specific fine tuning.
 ---
 
 ## Paper
