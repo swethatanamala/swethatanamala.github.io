@@ -7,13 +7,14 @@ description: The authors developed a r-cnn newtork model for object detection an
 ## Paper
 - Title: Rich feature hierarchies for accurate object detection and semantic segmentation ([R-CNN](https://arxiv.org/abs/1311.2524))
 - Submission date: 11 Nov 2013
-- This paper is very long and does not have typical division of sections like architecture, training and experiments. All are explained combinedly under object detection and semantic segmentation respectively. 
+- This paper is very long and does not have typical division of sections like architecture, training and experiments. Everything is explained together in two sections: object detection and semantic segmentation. 
 
 ## Key Contributions
 - This network aims to get better performance on object detection as well as semantic segmentation.
 - Developed an approach that combines two key insights:
     + To apply high-capacity convolutional neural networks (CNNs) to bottom-up region proposals in order to localize and segment objects.
     + When labeled training data is scarce, supervised pre-training for an auxiliary task, followed by domain-specific fine tuning, yields a significant performance boost.
+- In this paper, authors answered the question "To what extent do the CNN classification results on ImageNet generalize to object detection results on the PASCAL VOC Challenge?"
 - This paper is the first to show that a CNN can lead to dramatically higher object detection performance on PASCAL VOC.
 
 ## R-CNN
@@ -22,13 +23,8 @@ description: The authors developed a r-cnn newtork model for object detection an
 <img src="/assets/Images/rcnn/rcnn_overall.png" alt="tab_contents">
 </p>
 
-RCNN network works as below:
-1. The network takes an input image
-2. It extracts around 2000 bottom-up region proposals
-3. It computes features for each proposal using a large convolutional neural network (CNN)
-4. Then class specific linear SVMs classifies each region.
+This network is named as R-CNN becuase it combines region proposals with CNNs. Therefore R-CNN is Regions with CNN features. Unlike image classification, detection and segmentation requires localizing objects within a image. CNN localization problem is solved by operating within the "recognition using regions".
 
-This network is named R-CNN becuase it combines region proposals with CNNs.
 
 ### Object detection
 R-CNN object detection system consists of three modules. 
