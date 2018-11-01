@@ -61,7 +61,7 @@ The above method is an alternative motion representation. Here the method sample
 
 ## Experiments
 
-The architectures which were mentioned before were trained and evaluated on the below standard video actions benchmarks
+The above architectures were trained and evaluated on the below standard video actions benchmarks
 + [UCF-101](http://crcv.ucf.edu/data/UCF101.php)
     * 13k videos in total (180 frames/video on average)
     * annotated into 101 action classes
@@ -69,7 +69,7 @@ The architectures which were mentioned before were trained and evaluated on the 
     * 6.8k videos in total
     * annotated into 51 action classes
 
-The following observation are made from the experiments that were done by the authors.
+The following are the observations from the results of experiments.
 - Spatial ConvNet solely trained on the UCF-101 dataset leads to over-fitting, therefore authors opted for training the last layer on top of a pre-trained ConvNet.
 - Experiments on temporal ConvNet resulted that optical flow stacking performs better than trajectory stacking.
 - Temporal ConvNets significantly outperform the spatial ConvNets, which confirms the importance of motion importance for action recognition.

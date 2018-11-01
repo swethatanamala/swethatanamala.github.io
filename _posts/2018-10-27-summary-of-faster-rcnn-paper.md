@@ -5,7 +5,7 @@ description: The authors developed a faster r-cnn newtork model for object detec
 ---
 
 ## Paper
-- Title: Faster R-CNN ([fasterRCNN](https://arxiv.org/abs/1506.01497))
+- Title: Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks ([fasterRCNN](https://arxiv.org/abs/1506.01497))
 - Submission date: 4 jun 2015
 
 ## Key Contributions
