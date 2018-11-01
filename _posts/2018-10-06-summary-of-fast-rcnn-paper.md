@@ -40,47 +40,7 @@ The experiments use the following ImageNet models
 
 In experiments authors compared Fast RCNN against the other top methods available at that time. They tested the network on the three datasets: [VOC07](http://host.robots.ox.ac.uk/pascal/VOC/voc2007/), [VOC 2010](http://host.robots.ox.ac.uk/pascal/VOC/voc2010/) and [VOC 2012](http://host.robots.ox.ac.uk/pascal/VOC/voc2012/). All the experiments of Fast RCNN use single-scale training and testing.
 
-For training, the following datasets are used.
-- 12: VOC12 trainval
-- Prop.: proprietary dataset
-- 12+seg: 12 with segmentation annotations
-- 07++12: union of VOC07 trainval, VOC07 test, and VOC12 trainval
-- 07: VOC07 trainval
-- 07\ diff: 07 without "difficult" examples
-- 07+12: union of 07 and VOC12 trainval
-- Unk: unknown
-
-|Method| train set |mAP |
-|:-----:|:----:|:-----------:|
-|SPPnet BB|07\diff|63.1|
-|R-CNN BB|07|66.0|
-|Fast RCNN|07|66.9|
-|Fast RCNN|07\diff|68.1|
-|Fast RCNN|07+12|**70.0**| 
-
-The above table presents the VOC 2007 test detection average precision (%)
-
-From the VOC07 results, we observed that SPPnet uses five scales during both training and testing. The improvement of Fast R-CNN over SPPnet illustrates that even though Fast R-CNN uses single-scale training and testing, fine-tuning the conv layers provides a large improvement in mAP. 
-
-|Method| train set |mAP |
-|:-----:|:----:|:-----------:|
-|BabyLearning|Prop.|63.8|
-|R-CNN BB|12|62.9|
-|SegDeepM|12+seg|67.2|
-|Fast RCNN|12|66.1|
-|Fast RCNN|07++12|**68.8**| 
-
-The above table presents the VOC 2010 test detection average precision (%)
-
-|Method| train set |mAP |
-|:-----:|:----:|:-----------:|
-|BabyLearning|Prop.|63.2|
-|NUS NIN c2000|Unk|63.8|
-|R-CNN BB|12|62.4|
-|Fast RCNN|12|65.7|
-|Fast RCNN|07++12|**68.4**| 
-
-The above table presents the VOC 2012 test detection average precision (%)
+From the results, we observed that SPPnet uses five scales during both training and testing. The improvement of Fast R-CNN over SPPnet illustrates that even though Fast R-CNN uses single-scale training and testing, fine-tuning the conv layers provides a large improvement in mAP (mean average precision (%)). 
 
 <p align="center">
 <img src="/assets/Images/fastrcnn/time_results.png" alt="tab_contents">
