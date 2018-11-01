@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Summary of Two-Stream ConvNets for Action Recognition in Videos paper
-description: The authors developed a faster r-cnn newtork model for object detection. This network introduced a region proposal network (RPN) that shares full-image convolutional features with detection network (Fast R-CNN), thus enabling cost-free region proposals.
+title: Action Recognition - Summary of Two Steam CNN paper
+description: The authors developed a two stream convolutional newtork model for action recognition in videos. They investigated a different architecture based on two seperate recognition streams i.e, spatial and temporal recognition, which are then combined by late fusion.
 ---
 
 ## About Paper
