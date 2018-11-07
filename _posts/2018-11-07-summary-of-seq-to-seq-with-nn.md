@@ -56,7 +56,7 @@ As typical neural language models depend on a vector representation for each wor
 
 The observations of the experiments are described below:
 
--  Eventhough LSTM is capable of solving problems with long term dependencies, authors discovered that the LSTM learns much better when the source sentences are reversed (the target sentences are not reversed). By doing so, the LSTM’s test BLEU scores of its decoded translations increased from 25.9 to 30.6.
+-  Even though LSTM is capable of solving problems with long term dependencies, authors discovered that the LSTM learns much better when the source sentences are reversed (the target sentences are not reversed). By doing so, the LSTM’s test BLEU scores of its decoded translations increased from 25.9 to 30.6.
 -  Although LSTMs tend to not suffer from the vanishing gradient problem, they can have exploding gradients. Thus authors enforced a hard constraint on the norm of the gradient by scaling it when its norm exceeded a threshold. 
 -  Different sentences have different lengths. Most sentences are short (e.g., length 20-30) but some sentences are long (e.g., length > 100), so a minibatch of 128 randomly chosen training sentences will have many short sentences and few long sentences, and as a result, much of the computation in the minibatch is wasted. To address this problem, authors made sure that all sentences within a minibatch were roughly of the same length, which a 2x speedup.
 -  The best results are obtained with an ensemble of 5 deep LSTMs using a left to right beam-search encoder that differ in their random initializations and in the random order of minibatches
