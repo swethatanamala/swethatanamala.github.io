@@ -1,7 +1,7 @@
 ---
 layout: post
 title: NLP - Summary of Sequence to Sequence with Neural Networks
-description: The authors developed a two stream convolutional newtork model for action recognition in videos. They investigated a different architecture based on two seperate recognition streams i.e, spatial and temporal recognition, which are then combined by late fusion.
+description: The authors developed a straightforward application of the Long Short-Term Memory (LSTM) architecture  which can solve English to French translation.
 ---
 
 ## About Paper
