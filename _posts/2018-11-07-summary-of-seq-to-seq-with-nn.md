@@ -13,9 +13,12 @@ description: The authors developed a straightforward application of the Long Sho
 
 - In this paper, authors showed a straightforward application of the Long Short-Term Memory (LSTM) architecture  which can solve general sequence to sequence problems.
 - The novelity of the introduced architecture is that the LSTM reads the input sequence in reverse order, because doing so introduces many short term dependencies in the data that make the optimization problem much easier.
-- The main result of the paper is that on an English to French translation task from the WMT-14 dataset, the translations produced by the LSTM achieve a BLEU score of 34.8 on the entire test set.
+
+## Achievements
+
+- The main result of the paper is that on an English to French translation task from the WMT-14 dataset, the translations produced by the LSTM achieves a BLEU score of 34.8 on the entire test set.
 -  Additionally, the LSTM did not have difficulty on long sentences.  
--  When authors used the LSTM to rerank the 1000 hypotheses produced by the phrase-based SMT system, its BLEU score increases to 36.5, which is close to the previous state of the art
+-  When authors used the LSTM to rerank the 1000 hypotheses produced by the phrase-based statistical machine translation(SMT) system, its BLEU score increases to 36.5, which is close to the previous state of the art.
 - The LSTM also learned sensible phrase and sentence representations that are sensitive to word order and are relatively invariant to the active and the passive voice
 
 ## Sequence to Sequence Learning
@@ -59,12 +62,12 @@ The observations of the experiments are described below:
 -  Even though LSTM is capable of solving problems with long term dependencies, authors discovered that the LSTM learns much better when the source sentences are reversed (the target sentences are not reversed). By doing so, the LSTM’s test BLEU scores of its decoded translations increased from 25.9 to 30.6.
 -  Although LSTMs tend to not suffer from the vanishing gradient problem, they can have exploding gradients. Thus authors enforced a hard constraint on the norm of the gradient by scaling it when its norm exceeded a threshold. 
 -  Different sentences have different lengths. Most sentences are short (e.g., length 20-30) but some sentences are long (e.g., length > 100), so a minibatch of 128 randomly chosen training sentences will have many short sentences and few long sentences, and as a result, much of the computation in the minibatch is wasted. To address this problem, authors made sure that all sentences within a minibatch were roughly of the same length, which a 2x speedup.
--  The best results are obtained with an ensemble of 5 deep LSTMs using a left to right beam-search encoder that differ in their random initializations and in the random order of minibatches
-- Finally, the LSTM is used to rescore the publicly available 1000-best lists of the SMT baseline on the same task. By doing so, BLEU score of 36.5 was obtained, which improves the baseline by 3.2 BLEU points and is close to the previous state-of-the-art (37)
+-  The best results are obtained with an ensemble of 5 deep LSTMs using a left to right beam-search encoder that differ in their random initializations and in the random order of minibatches.
+- Finally, the LSTM is used to rescore the publicly available 1000-best lists of the SMT baseline on the same task. By doing so, BLEU score of 36.5 was obtained, which improves the baseline by 3.2 BLEU points and is close to the previous state-of-the-art (37 BLEU).
 
 ## Conclusion
 
-In this paper, authors showed that a large deep LSTM with a limited vocabulary can outperform a standard SMT-based system whose vocabulary is unlimited on a large-scale MT task
+In this paper, authors showed that a large deep LSTM with a limited vocabulary can outperform a standard SMT-based system whose vocabulary is unlimited on a large-scale MT task.
 
 
 
