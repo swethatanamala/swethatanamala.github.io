@@ -12,12 +12,12 @@ description: In this paper, authors conjectured that the use of a fixed-length v
 ## Key Contributions
 
 - Unlike the traditional statistical machine translation systems (which consists of many small sub-components that are tuned seperately), this paper aims at building a single neural network that can be jointly tuned to maximize the translation performance.
-- In this paper, authors conjectured that the use of a fixed-length vector is a bottleneck in improving the performance of the basic encoder-decoder architecture.
-- Therefore, authors extended the basic encoder–decoder model to automatically (soft-)search the parts of a source sentence that are relevant to predicting a target word, without having to form these parts as a hard segment explicitly.
+- In this paper, authors conjectured that the use of a single fixed-length encoded representation of source sentence in the basic encoder-decoder is a bottleneck for the performance.
+- Therefore, authors extended this basic encoder–decoder model so that decoder automatically (soft-)searches the parts of the source sentence that are relevant to predicting a target word.
 
 ## Encoder Decoder Models
 
-The models proposed previously for neural machine translation often belong to a family of encoder-decoder models. The encoder architecture encodes a source sentence to a fixed-length vector. From this fixed-length vector decoder generates a translation to the source sentence.
+The models proposed previously for neural machine translation often belong to a family of encoder-decoder models. The encoder architecture encodes a source sentence to a fixed-length vector. From this fixed-length vector, decoder generates a translation to the source sentence.
 
 The potential issue with the above structure is that encoder neural network needs to be able to compress all the necessary information of a source sentence into a fixed-length vector. This might make it difficult for the encoder to cope with long sentences, especially those that are longer than the sentences in the training corpus.
 
