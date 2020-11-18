@@ -4,19 +4,19 @@ title: Jekyll github blogs and their ruby dependencies
 description: In this blog, I would like to eloborate the difference of various terms using ruby programming language
 ---
 
-As a avid python programmer I know nothing about the ruby programming language. I took help of my friend to create this blog. Everytime I change my laptop I have to install existing dependencies to run my current blog. I frequently forget the things on how to install dependencies effeciently to update my blog and check how my blog looks before the blog going to be public. This time I thought to write my research on how exactly this blog is built and the dependences to run this blog.
+As an avid python programmer I know nothing about the ruby programming language. I took help of my friend to create this blog. Everytime I change my laptop I have to install existing dependencies to run my current blog. I frequently forget the things on how to install dependencies effeciently to update my blog and check how my blog looks before it goes to public. This time I thought to write my research on how exactly this blog is built and the dependences to run this blog.
 
 
 
-## Ruby vs Python
-These both languages are opensource and are object-oriented programming languages. Both are scripting, server-side, cross-platform and general purpose programming languages. Both are dynamically typed, which means you do need to declare a variable before using it.
+## Ruby and Python
+These both languages are opensource and are object-oriented programming languages. Both are scripting, server-side, cross-platform and general purpose programming languages. Both are dynamically typed, which means you do not need to declare the type of variable before using it.
 
 | **Python**  | **Ruby**  |
 |:-----:|:---------------:|
 |  Due to python’s straightforward and simple syntax, most freshers opt for it. | For a beginner, Ruby can be slightly challenging, as the language usually takes much getting used to |
 | As for Python, you’ll find a plethora of ready-to-use code or “modules” that are easily accessible via PyPI <br/>| Although Ruby, too, has same number of ready-to-use code called Gems, the difference between Ruby and Python reusable code lies in the filtering factor <br/> |
 | Python's virtualenv lets developers isolate different versions of the python interpreter  | Ruby also comes with similar features -rbenv or rvm  |
-| Ruby is used widely for websites such as Airbnb, Hulu, Kickstarter, twitter, basecamp and Github | Python is used for websites such as Google, YouTube, Spotify, and Quora. |
+| Python is used for websites such as Google, YouTube, Spotify, and Quora. | Ruby is used widely for websites such as Airbnb, Hulu, Kickstarter, twitter, basecamp and Github|
 
 The above comparision is taken from this [source](https://www.upgrad.com/blog/python-vs-ruby-comparison/)
 
@@ -30,7 +30,7 @@ My blog uses [tale](https://github.com/chesterhow/tale) theme which inturn uses 
 ```bash
 jekyll serve
 ```
-To install jekyll gem we need to install ruby
+But before the above command, there are dependencies to run the above successfully. To install jekyll gem we need to install ruby
 
 For linux
 
@@ -63,13 +63,12 @@ It was 3.1.4 version, I had to downgrade it using below command due to (Gem::Uns
 ```bash
 sudo gem update --system <version no>
 ```
-
-Then you can install jekyll gem by the following command
+I used 2.5.2 version no. Then you can install jekyll gem by the following command
 ```bash
 gem install bundler jekyll
 ```
 
-You might have got a question what is bundler is here
+You might have got a question what is bundler doing here
 
 ## What is bundler?
 [Bundler](https://bundler.io/) provides a consistent environment for ruby projects by tracking and installing the exact gems and versions that are needed. Now go to the directory of ruby project, here it is my blog directory. To install the dependency gems use the following command
