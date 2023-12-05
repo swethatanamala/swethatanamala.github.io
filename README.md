@@ -10,7 +10,7 @@ You can check [archive](https://swethatanamala.github.io/archive/) for the blog 
 
  I am Swetha Tanamala from Nellore, Andhra Pradesh, India. I graduated dual degree course (B.Tech + M.Tech) in Computer Science and Engineering from Indian Institute of Technology, Madras in 2017.
 
-Currently, I am working as AI scientist at [Qure.ai](http://qure.ai). In this blog, I explain some of the research work associated with my job.
+Currently, I am working as Director of AI at [Qure.ai](http://qure.ai). In this blog, I explain some of the research work associated with my job.
 
 I am active in the below social media websites:
 
